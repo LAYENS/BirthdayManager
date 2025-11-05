@@ -8,14 +8,14 @@ import org.springframework.stereotype.Component;
 
 /**
  * Класс конфигурации бота
+ * Получение токета и имени
  * Created By Aleksey A Selikhov 2025, Oct 13
  */
 @Component
-@ConfigurationProperties(prefix = "bot")
 @Data
 public class BotConfig {
-    @Value("${BOT_NAME}")
+    @Value("${bot.name}")
     private String botName;
-    @Value("${BOT_TOKEN}")
+    @Value("${bot.token}")
     private String botToken;
 }
